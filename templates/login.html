@@ -1,0 +1,29 @@
+{% extends "html_template.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+<div class="text-center form-signin">
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+        <div class="form-floating mb-2">
+            {{ form.username(
+            class="form-control"
+            )}}
+            {{ form.username.label }}
+        </div>
+        <div class="form-floating mb-2">
+            {{ form.password(
+            class="form-control"
+            )}}
+            {{ form.password.label
+            }}
+        </div>
+        {{ form.submit(class="w-100 btn btn-lg btn-primary")}}
+    </form>
+</div>
+{% endblock %}
